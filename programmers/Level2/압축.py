@@ -5,20 +5,21 @@ def solution(msg):
     for i in range(ord("A"), ord("Z") + 1):
         dic[chr(i)] = v
         v += 1 
-    temp = ""
-    while i in range(len(msg)):
-        for m in msg[i:]:
-            temp += m
-            if temp in dic.keys():
-                continue
-            else:
-                w, c = temp[:-1], temp[-1]
-                break
-        answer.append(dic[w])
-        dic[w+c] = v
-        v += 1
-        print("w:",w,"c:",c)
-            
-    print(dic)
+    st = []
+    for m in msg:
+        st.append(m)
+    w = ""
+    while st:
+        w += st.pop(0)
+        c = st[0] if st else ""
+        add = w + c
+        if add not in dic.keys():
+            dic[add] = v
+            v += 1
+            answer.append(dic[w])
+            w = ""
+        else:
+            continue
+    answer.append(dic[w])
     return answer
 solution("KAKAO")
