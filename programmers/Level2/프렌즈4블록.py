@@ -15,7 +15,7 @@ def check_four(x,y,board,remove_set):
     if not board[y][x]:
         return
     if 0 <= y + 1 < len(board) and 0 < x + 1 < len(board[0]):
-        if board[y][x] and (board[y+1][x] == board[y][x+1] == board[y+1][x+1] == board[y][x]):
+        if board[y+1][x] == board[y][x+1] == board[y+1][x+1] == board[y][x]:
             remove_set.add((y,x))
             remove_set.add((y+1,x)) 
             remove_set.add((y,x+1))
