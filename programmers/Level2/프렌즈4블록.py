@@ -35,4 +35,4 @@ def organize_block(remove_set,board,answer):
                         break
     return board, answer
 
-solution(6,6,["TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"]	)
+solution(6,6,["TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"])
