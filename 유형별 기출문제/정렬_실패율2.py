@@ -1,3 +1,4 @@
+#Counter 사용
 from collections import Counter
 def solution(N, stages):
     people = len(stages)
