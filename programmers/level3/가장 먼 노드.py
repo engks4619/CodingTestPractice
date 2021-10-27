@@ -19,6 +19,6 @@ def solution(n, edge):
             if distance[i] > cost:
                 distance[i] = cost
                 q.append(i)
-    print(distance)
-    return answer
+    max_distance = max(distance)
+    return len([d for d in distance if d == max_distance])
 solution(6,[[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]])

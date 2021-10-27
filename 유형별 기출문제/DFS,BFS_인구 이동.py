@@ -1,5 +1,6 @@
 from collections import deque
-from itertools import chain
+import sys
+input = sys.stdin.readline
 n, L, R = map(int,input().split())
 board = []
 for _ in range(n):
@@ -41,8 +42,7 @@ while True:
     if idx == n * n:
         break
     answer += 1
-    
-print(board)
+
 print(answer)
 
 

@@ -11,7 +11,7 @@ def solution(s):
                 result += str(count) + tmp if count != 1 else tmp
                 tmp = s[j:j+i]
                 count = 1
-        print(result)
+        result += str(count) + tmp if count != 1 else tmp
         answer = min(answer,len(result))
     return answer
 

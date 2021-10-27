@@ -9,7 +9,6 @@ for r in range(n):
             house.append((r,c))
         if d == 2:
             chicken.append((r,c))
-
 candidates = list(combinations(chicken,m))
 answer = 1e9
 for candidate in candidates:

@@ -8,7 +8,7 @@ def solution(skill, skill_trees):
         for c in skill_tree:
             if c in skill_dict.keys():
                 if skill_dict[c] != flag:
-                    answer -=1
+                    answer -= 1
                     break
                 else:
                     flag += 1

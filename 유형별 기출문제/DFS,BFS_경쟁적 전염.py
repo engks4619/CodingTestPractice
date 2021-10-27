@@ -16,7 +16,6 @@ second, target_x, target_y = map(int,input().split())
 
 dx = [1,0,-1,0]
 dy = [0,1,0,-1]
-
 def spread(num_virus, time, x, y):
     for i in range(4):
         nx, ny = x + dx[i], y + dy[i]
@@ -26,7 +25,6 @@ def spread(num_virus, time, x, y):
                 q.append((num_virus, time + 1, nx, ny))
 
 while q:
-    print(q)
     num_virus, time, x, y = q.popleft()
     if time == second:
         break

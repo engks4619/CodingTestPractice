@@ -47,4 +47,4 @@ for p in combinations(empty,3):
     for i, j in virus:
         spread(i,j)
     result = max(result, count_safe()) 
-print(result, "time:",time.time()-start_time)
+print(result)

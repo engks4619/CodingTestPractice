@@ -1,4 +1,3 @@
-import heapq
 def solution(food_times, k):
     if sum(food_times) < k:
         return -1
@@ -20,7 +19,6 @@ def solution(food_times, k):
             for i in st[i:]:
                 tmp.append(i[1])
             tmp.sort()
-            print(tmp[k])
             return tmp[k]
         n -= 1
         

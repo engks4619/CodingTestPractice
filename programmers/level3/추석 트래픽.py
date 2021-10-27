@@ -1,4 +1,3 @@
-
 def get_time(time, duration):
     t = time.split(":")    
     end_time = int(t[0])*60*60*1000 + int(t[1])*60*1000 + int(float(t[2])*1000)
@@ -11,7 +10,6 @@ def solution(lines):
     for line in lines:
         start_time, end_time = get_time(line.split()[1],line.split()[2][:-1])
         lst.append((start_time,end_time))
-    print(lst)
     for i in range(len(lst)):
         left = lst[i][1]
         right = left + 1000
@@ -29,7 +27,6 @@ def solution(lines):
                 count += 1
                 continue
         answer = max(answer, count)
-    print(answer)
     return answer
 
 solution(

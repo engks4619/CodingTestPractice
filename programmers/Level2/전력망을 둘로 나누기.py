@@ -1,26 +1,26 @@
 def solution(n, wires):
     answer = n
-    tree = [set() for _ in range(n+1)]    
+    adj = [set() for _ in range(n+1)]    
     for a, b in wires:
-        tree[a].add(b)
-        tree[b].add(a)
+        adj[a].add(b)
+        adj[b].add(a)
     for a, b in wires:
-        tree[a].remove(b)
-        tree[b].remove(a)
-        result = abs(2*dfs(a,tree,n) - n)
+        adj[a].remove(b)
+        adj[b].remove(a)
+        result = abs(2*dfs(a,adj,n) - n)
         answer = min(answer,result)
-        tree[a].add(b)
-        tree[b].add(a)
+        adj[a].add(b)
+        adj[b].add(a)
     return answer
 
-def dfs(start, tree, n):
+def dfs(start, adj, n):
     st = [start]
     visited = [False for _ in range(n+1)]
     visited[start] = True
     count = 1
     while st:
         v = st.pop()
-        for w in tree[v]:
+        for w in adj[v]:
             if not visited[w]:
                 st.append(w)
                 visited[w] = True 
