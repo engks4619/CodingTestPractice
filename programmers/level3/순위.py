@@ -1,4 +1,3 @@
-from collections import deque
 def solution(n, results):    
     answer = 0
     INF = int(1e9)
