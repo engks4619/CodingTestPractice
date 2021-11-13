@@ -17,5 +17,4 @@ class Solution:
         while len(q) > 1:
             if q.popleft() != q.pop():
                 return False
-
         return True

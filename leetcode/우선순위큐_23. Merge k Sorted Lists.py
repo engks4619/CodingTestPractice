@@ -14,6 +14,7 @@ class Solution:
         for i in range(len(lists)):
             if lists[i]:
                 heapq.heappush(heap, (lists[i].val, i, lists[i]))
+                
         while heap:
             node = heapq.heappop(heap)
             idx = node[1]
