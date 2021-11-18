@@ -8,7 +8,8 @@ class Solution:
 
         def dfs(elements):
             if len(elements) == 0:
-                results.append(prev_elements[:])        
+                results.append(prev_elements[:])  
+                return      
             for e in elements:
                 next_elements = elements[:]
                 next_elements.remove(e)
@@ -18,3 +19,9 @@ class Solution:
         
         dfs(nums)
         return results
+#itertools permutaitons
+from itertools import permutations
+
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        return list(permutations(nums))
