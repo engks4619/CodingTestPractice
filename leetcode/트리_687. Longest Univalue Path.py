@@ -5,7 +5,7 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    result: int = 0
+    result : int = 0
 
     def longestUnivaluePath(self, root: TreeNode) -> int: 
         def dfs(node: TreeNode):
@@ -22,7 +22,7 @@ class Solution:
                 right += 1
             else:
                 right = 0
-                
+
             self.result = max(self.result, left + right)
             return max(left, right)
         
