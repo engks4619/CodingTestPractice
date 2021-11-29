@@ -1,5 +1,4 @@
 import heapq
-import sys
 
 INF = int(1e9)
 
@@ -26,11 +25,10 @@ def dijkstra():
 
 
 T = int(input())
-input = sys.stdin.readline
-for C in range(1, T + 1):
+for test_case in range(1, T + 1):
     N = int(input())
     board = []
     for _ in range(N):
-        board.append(list(map(int, input().strip())))
+        board.append(list(map(int, input())))
     print(board)
-    print(f"#{C} {dijkstra()}")
+    print(f"#{test_case} {dijkstra()}")
